@@ -33,7 +33,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-blue-600">
-            RoofPro
+            Numele firmei
           </Link>
 
           {/* Desktop Navigation */}

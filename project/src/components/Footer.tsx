@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">RoofPro</h3>
+            <h3 className="text-2xl font-bold">Numele firmei</h3>
             <p className="text-gray-400">
               Experți în montaj, renovare și reparații acoperișuri de orice fel.
             </p>
@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} RoofPro. Toate drepturile rezervate.</p>
+          <p>&copy; {new Date().getFullYear()} Numele firmei. Toate drepturile rezervate.</p>
         </div>
       </div>
     </footer>

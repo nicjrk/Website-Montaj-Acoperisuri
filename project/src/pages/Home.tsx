@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Star, CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const Home = () => {
   const services = [
@@ -19,24 +19,6 @@ const Home = () => {
       title: 'Reparații',
       description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș.',
       image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=600',
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: 'Ioan Popescu',
-      text: 'Echipa RoofPro a făcut o treabă excelentă cu acoperișul casei mele. Profesioniști adevărați!',
-      rating: 5,
-    },
-    {
-      name: 'Maria Ionescu',
-      text: 'Am fost impresionată de rapiditatea și calitatea lucrării. Recomand cu încredere!',
-      rating: 5,
-    },
-    {
-      name: 'George Constantinescu',
-      text: 'Cel mai bun raport calitate-preț. Lucrare impecabilă și echipă serioasă.',
-      rating: 5,
     },
   ];
 
@@ -122,38 +104,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Ce Spun Clienții Noștri
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white p-6 rounded-lg shadow-lg"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="text-yellow-400 fill-current"
-                      size={20}
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4">{testimonial.text}</p>
-                <p className="font-semibold">{testimonial.name}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
@@ -192,7 +142,7 @@ const Home = () => {
             to="/contact"
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Solicită o Ofertă Gratuită <ArrowRight />
+            Solicită o Ofertă<ArrowRight />
           </Link>
         </div>
       </section>
