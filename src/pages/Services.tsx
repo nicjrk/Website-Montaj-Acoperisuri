@@ -1,9 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Wrench, Shield, ArrowRight, Hammer } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import heroImage from '../Poze/slide4.jpg'; // Import imaginea locală pentru fundal
+import service1Image from '../Poze/service1.jpg'; // Import imagine locală pentru serviciu 1
+import service2Image from '../Poze/service2.jpg'; // Import imagine locală pentru serviciu 2
+import service3Image from '../Poze/service3.jpg'; // Import imagine locală pentru serviciu 3
 
 const Services = () => {
+  const navigate = useNavigate();
+
   const services = [
     {
       icon: Hammer,
@@ -15,7 +22,7 @@ const Services = () => {
         'Sisteme complete de drenaj',
         'Izolație termică',
       ],
-      image: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&q=80&w=800',
+      image: service1Image, // Imagine importată
     },
     {
       icon: Wrench,
@@ -27,7 +34,7 @@ const Services = () => {
         'Renovare completă',
         'Întreținere periodică',
       ],
-      image: 'https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&q=80&w=800',
+      image: service2Image, // Imagine importată
     },
     {
       icon: Shield,
@@ -39,19 +46,20 @@ const Services = () => {
         'Ventilație acoperiș',
         'Hidroizolații',
       ],
-      image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=800',
+      image: service3Image, // Imagine importată
     },
   ];
 
   return (
     <div>
+      {/* PageHeader cu imagine locală */}
       <PageHeader
         title="Serviciile Noastre"
         subtitle="Soluții Complete pentru Acoperișul Tău"
-        backgroundImage="https://images.unsplash.com/photo-1632763247220-3735b0653236?auto=format&fit=crop&q=80"
+        backgroundImage={heroImage} // Imagine locală pentru fundal
       />
 
-      {/* Services List */}
+      {/* Lista Serviciilor */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="space-y-20">
@@ -67,7 +75,7 @@ const Services = () => {
               >
                 <div className="w-full md:w-1/2">
                   <img
-                    src={service.image}
+                    src={service.image} // Imaginea locală pentru fiecare serviciu
                     alt={service.title}
                     className="w-full h-[400px] object-cover rounded-lg shadow-lg"
                   />
@@ -91,7 +99,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Secțiunea CTA */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -100,12 +108,12 @@ const Services = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Contactează-ne pentru o evaluare gratuită și o ofertă personalizată pentru proiectul tău.
           </p>
-          <a
-            href="/contact"
+          <button
+            onClick={() => navigate('/contact')}
             className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Contactează-ne Acum <ArrowRight />
-          </a>
+          </button>
         </div>
       </section>
     </div>

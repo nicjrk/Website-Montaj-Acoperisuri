@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import heroImage from '../Poze/slide4.jpg';
 
 const Home = () => {
   const services = [
@@ -28,7 +29,7 @@ const Home = () => {
       <section
         className="relative h-screen flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1632763247220-3735b0653236?auto=format&fit=crop&q=80)',
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
