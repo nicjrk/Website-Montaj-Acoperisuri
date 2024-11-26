@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+
+// Imagini locale pentru secțiunea Servicii
+import montajImage from '../Poze/Poza3.jpg';
+import renovareImage from '../Poze/Poza4.jpg';
+import reparatiiImage from '../Poze/Poza10.jpg';
 import heroImage from '../Poze/slide4.jpg';
 
 const Home = () => {
@@ -9,17 +14,17 @@ const Home = () => {
     {
       title: 'Montaj Acoperișuri',
       description: 'Instalare profesională de acoperișuri noi cu materiale premium.',
-      image: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&q=80&w=600',
+      image: montajImage, // Imagine locală pentru Montaj
     },
     {
       title: 'Renovare',
       description: 'Renovăm și modernizăm acoperișuri existente pentru o durată de viață extinsă.',
-      image: 'https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&q=80&w=600',
+      image: renovareImage, // Imagine locală pentru Renovare
     },
     {
       title: 'Reparații',
       description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș.',
-      image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=600',
+      image: reparatiiImage, // Imagine locală pentru Reparații
     },
   ];
 
