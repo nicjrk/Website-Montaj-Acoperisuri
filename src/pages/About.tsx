@@ -1,29 +1,105 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Shield, Award, Clock } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 
+// Import imagini pentru galerie
+import Poza1 from '../Poze/Poza1.jpg';
+import Poza2 from '../Poze/Poza2.jpg';
+import Poza3 from '../Poze/Poza3.jpg';
+import Poza4 from '../Poze/Poza4.jpg';
+import Poza5 from '../Poze/Poza5.jpg';
+import Poza14 from '../Poze/Poza14.jpg';
+import Poza15 from '../Poze/Poza15.jpg';
+import Poza16 from '../Poze/Poza16.jpg';
+import Poza17 from '../Poze/Poza17.jpg';
+
+const galleryImages = [
+  {
+    src: Poza1,
+    alt: 'Montaj Acoperiș Rezidențial de Lux',
+    description: 'Montaj acoperiș rezidențial de lux, proiect finalizat cu țiglă metalică de înaltă calitate, integrând un design modern și detalii estetice rafinate.',
+  },
+  {
+    src: Poza2,
+    alt: 'Construcție Suport Lemn',
+    description: 'Structura din lemn pregătită pentru instalarea acoperișului de înaltă calitate.',
+  },
+  {
+    src: Poza3,
+    alt: 'Sistem de Siguranță',
+    description: 'Sistem de siguranță instalat pe un acoperiș din țiglă ceramică.',
+  },
+  {
+    src: Poza4,
+    alt: 'Montaj Acoperiș Complex',
+    description: 'Proiect complex de montaj acoperiș, inclusiv ferestre mansardate.',
+  },
+  {
+    src: Poza5,
+    alt: 'Hale Industriale',
+    description: 'Montaj acoperiș pentru hale industriale, utilizând materiale rezistente.',
+  },
+  {
+    src: Poza14,
+    alt: 'Acoperiș din Panouri Metalice',
+    description: 'Proiect executat cu acoperiș din panouri metalice, rezistent și durabil.',
+  },
+  {
+    src: Poza15,
+    alt: 'Finisaje Detaliate',
+    description: 'Detalii de artizanat pentru structura din lemn a acoperișului.',
+  },
+  {
+    src: Poza16,
+    alt: 'Design Modern',
+    description: 'Fațadă și acoperiș cu design modern pentru clădiri rezidențiale.',
+  },
+  {
+    src: Poza17,
+    alt: 'Renovare Acoperiș',
+    description: 'Renovare completă a unui acoperiș clasic din tablă faltuită.',
+  },
+];
+
+
 const About = () => {
-  const teamMembers = [
-    {
-      name: 'Angajat 1',
-      role: 'Rol 1',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300',
-    },
-    {
-      name: 'Angajat 2',
-      role: 'Rol 2',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=300',
-    },
-    {
-      name: 'Angajat 3',
-      role: 'Rol 3',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300',
-    },
+  const serviceLocations = [
+    'Urziceni', 'Cernica', 'Moara Vlăsiei', 'Târgoviște', 'Chitila', 'Balotești', 'Măgurele',
+    'Domnești', 'Snagov', 'Clinceni', 'Giurgiu', 'Ilfov', 'Băneasa', 'Pantelimon',
+    'Berceni', 'Otopeni', 'Bragadiru', 'București - Sector 1', 'Valea Merilor',
+    'București - Sector 2', 'Pitești', 'București - Sector 6', 'Oltenia', 'Ploiești',
   ];
 
   return (
     <div>
+      {/* Meta Tags */}
+      <head>
+        <title>Despre Noi | Servicii de Montaj Acoperișuri</title>
+        <meta
+          name="description"
+          content="Descoperiți experiența noastră în montaj de acoperișuri. Oferim servicii profesionale în locații precum București, Ilfov, Ploiești și multe altele."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Firma Montaj Acoperișuri",
+            "address": serviceLocations.map((location) => ({
+              "@type": "PostalAddress",
+              "addressLocality": location,
+              "addressCountry": "RO",
+            })),
+            "areaServed": serviceLocations,
+            "description": "Servicii profesionale de montaj acoperișuri în diverse locații din România.",
+            "telephone": "0742691135",
+            "openingHours": "Mo-Fr 08:00-18:00",
+            "url": "https://exemplu.ro",
+          })}
+        </script>
+      </head>
+
+      {/* Page Header */}
       <PageHeader
         title="Despre Noi"
         subtitle="Experiență și Profesionalism în Domeniul Acoperișurilor"
@@ -71,29 +147,45 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Gallery Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Echipa Noastră</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+          <h2 className="text-3xl font-bold text-center mb-8">Lucrările Noastre</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {galleryImages.map((image, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="overflow-hidden rounded-lg shadow-lg bg-white"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="w-full h-56 object-cover hover:scale-105 transition-transform"
+                  />
+                </Suspense>
+                <div className="p-4">
+                  <p className="text-gray-700 text-center">{image.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Service Locations Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Unde Oferim Servicii</h2>
+          <ul className="text-center text-gray-700 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {serviceLocations.map((location, index) => (
+              <li key={index} className="bg-white p-4 shadow-md rounded-md">{location}</li>
+            ))}
+          </ul>
         </div>
       </section>
     </div>

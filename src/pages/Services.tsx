@@ -4,9 +4,9 @@ import { Wrench, Shield, ArrowRight, Hammer } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import heroImage from '../Poze/slide4.jpg'; // Import imaginea locală pentru fundal
-import service1Image from '../Poze/service1.jpg'; // Import imagine locală pentru serviciu 1
-import service2Image from '../Poze/service2.jpg'; // Import imagine locală pentru serviciu 2
-import service3Image from '../Poze/service3.jpg'; // Import imagine locală pentru serviciu 3
+import service1Image from '../Poze/Poza3.jpg'; // Import imagine locală pentru serviciu 1
+import service2Image from '../Poze/Poza10.jpg'; // Import imagine locală pentru serviciu 2
+import service3Image from '../Poze/Poza17.jpg'; // Import imagine locală pentru serviciu 3
 
 const Services = () => {
   const navigate = useNavigate();
