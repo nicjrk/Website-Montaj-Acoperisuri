@@ -117,24 +117,29 @@ const Home = () => {
             De Ce Să Ne Alegi
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              'Experiență vastă în domeniu',
-              'Materiale premium garantate',
-              'Echipă profesionistă',
-              'Garanție extinsă pentru lucrări',
-            ].map((advantage, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex items-center space-x-4"
-              >
-                <CheckCircle className="flex-shrink-0" />
-                <span className="text-lg">{advantage}</span>
-              </motion.div>
-            ))}
-          </div>
+  {[
+    'Experiență vastă în domeniu',
+    'Materiale premium garantate',
+    'Echipă profesionistă',
+    'Garanție extinsă pentru lucrări',
+    'Nu percepem avans la încheierea contractului',
+    'Avansul se percepe doar când materialele necesare sunt la locația dumneavoastra și s-a demarat lucrarea',
+    'Lucrarea începe doar după ce verificați materialele',
+    'Seriozitate și transparență în execuție',
+  ].map((advantage, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      className="flex items-center space-x-4"
+    >
+      <CheckCircle className="flex-shrink-0" />
+      <span className="text-lg">{advantage}</span>
+    </motion.div>
+  ))}
+</div>
+
         </div>
       </section>
 
