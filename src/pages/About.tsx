@@ -94,7 +94,7 @@ const About = () => {
             "description": "Servicii profesionale de montaj acoperișuri în diverse locații din România.",
             "telephone": "0742691135",
             "openingHours": "Mo-Fr 08:00-18:00",
-            "url": "https://exemplu.ro",
+            "url": "http://smartroofconstantin.ro/",
           })}
         </script>
       </head>
