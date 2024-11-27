@@ -1,25 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
-import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Adresă',
-      content: 'Strada Principală nr. 123, București',
+      title: 'Locație',
+      content: 'Strada General Nicolae C. Dona 1, București 030167, România',
     },
     {
       icon: Phone,
       title: 'Telefon',
-      content: '+40 123 456 789',
+      content: '+40 742 691 135',
+      link: 'tel:+40742691135', // Link pentru apel
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@roofpro.ro',
+      content: 'smartroofconstantin.75@gmail.com',
+      link: 'mailto:smartroofconstantin.75@gmail.com', // Link pentru e-mail
     },
     {
       icon: Clock,
@@ -27,6 +28,10 @@ const Contact = () => {
       content: 'Luni - Vineri: 08:00 - 18:00',
     },
   ];
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/40742691135', '_blank'); // Link pentru WhatsApp
+  };
 
   return (
     <div>
@@ -49,35 +54,53 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white p-6 rounded-lg shadow-lg"
+                    className="bg-white p-6 rounded-lg shadow-lg flex items-center gap-4"
                   >
-                    <info.icon className="w-8 h-8 text-blue-600 mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">{info.title}</h3>
-                    <p className="text-gray-600">{info.content}</p>
+                    <info.icon className="w-8 h-8 text-blue-600" />
+                    <div>
+                      <h3 className="text-xl font-semibold mb-1">{info.title}</h3>
+                      {info.link ? (
+                        <a href={info.link} className="text-gray-600 hover:text-blue-600 transition">
+                          {info.content}
+                        </a>
+                      ) : (
+                        <p className="text-gray-600">{info.content}</p>
+                      )}
+                    </div>
                   </motion.div>
                 ))}
               </div>
 
-              {/* Map */}
-              <div className="bg-gray-200 h-[300px] rounded-lg">
-                {/* Integrate actual map here */}
-                <div className="w-full h-full flex items-center justify-center text-gray-500">
-                  Hartă Google Maps
+              {/* WhatsApp Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white p-6 rounded-lg shadow-lg flex items-center gap-4 cursor-pointer hover:bg-green-50 transition"
+                onClick={handleWhatsAppClick}
+              >
+                <MessageCircle className="w-8 h-8 text-green-600" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-1">WhatsApp</h3>
+                  <p className="text-gray-600">Trimite-ne un mesaj pe WhatsApp!</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
-            {/* Contact Form */}
+            {/* Google Maps Embed */}
             <div>
-              <h2 className="text-3xl font-bold mb-8">Trimite-ne un Mesaj</h2>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white p-8 rounded-lg shadow-lg"
-              >
-                <ContactForm />
-              </motion.div>
+              <h2 className="text-3xl font-bold mb-8">Locația Noastră</h2>
+              <div className="bg-gray-200 h-[300px] rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  title="Locația Smart Roof"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.865598683478!2d26.101924915318186!3d44.43289997910127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff9f6bdf5a73%3A0x9b48f9c402f21a5a!2sStrada%20General%20Nicolae%20C.%20Dona%201%2C%20Bucure%C8%99ti%20030167%2C%20Rom%C3%A2nia!5e0!3m2!1sen!2sro!4v1698765432109!5m2!1sen!2sro"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
