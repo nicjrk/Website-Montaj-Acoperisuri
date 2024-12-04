@@ -4,19 +4,20 @@ import { motion } from 'framer-motion';
 interface PageHeaderProps {
   title: string;
   subtitle?: string;
-  backgroundImage: string;
+  src: string; // Imaginea este trecută prin prop-ul 'src'
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, backgroundImage }) => {
+const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, src }) => {
   return (
     <section
       className="relative h-[40vh] min-h-[400px] flex items-center justify-center text-white"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
     >
+      {/* Imaginea este setată ca element img */}
+      <img
+        src={src}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover z-[-1]" // Stiluri pentru a face imaginea să fie de fundal
+      />
       <div className="absolute inset-0 bg-black bg-opacity-50" />
       <div className="relative container mx-auto px-4 text-center">
         <motion.h1
@@ -41,6 +42,5 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, backgroundImag
     </section>
   );
 };
-
 
 export default PageHeader;

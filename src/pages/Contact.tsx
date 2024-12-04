@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
-import PageHeader from '../components/PageHeader';
-
+import PageHeader from '../components/PageHeader2';
+import Poza3 from '../Poze/Poza3.jpg';
 const Contact = () => {
   const contactInfo = [
     {
@@ -36,9 +36,9 @@ const Contact = () => {
   return (
     <div>
       <PageHeader
-        title="Contact"
-        subtitle="Suntem Aici să te Ajutăm"
-        backgroundImage="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80"
+        title="Soluții Complete pentru Acoperișuri"
+        subtitle="Calitate și Siguranță pentru Acoperișul Tău"
+        src={Poza3}
       />
 
       <section className="py-20">
