@@ -24,6 +24,16 @@ const Header = () => {
     { path: '/contact', label: 'Contact' },
   ];
 
+  // Funcția pentru caseta de confirmare
+  const handleCall = () => {
+    const confirmCall = window.confirm(
+      "Doriți să sunați la SMART ROOF CONSTANTIN?\nNumăr: +40 (742) 691 135"
+    );
+    if (confirmCall) {
+      window.location.href = "tel:+40742691135";
+    }
+  };
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -33,7 +43,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-blue-600">
-          SMART ROOF CONSTANTIN
+            SMART ROOF CONSTANTIN
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,13 +61,15 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="tel:+40742691135"
+
+            {/* Buton cu casetă de confirmare */}
+            <button
+              onClick={handleCall}
               className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200"
             >
               <Phone size={20} />
               <span>Sună Acum</span>
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,13 +104,15 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="tel:+40742691135"
+
+              {/* Buton cu casetă de confirmare pentru mobile */}
+              <button
+                onClick={handleCall}
                 className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200"
               >
                 <Phone size={20} />
                 <span>Sună Acum</span>
-              </a>
+              </button>
             </div>
           </motion.div>
         )}
