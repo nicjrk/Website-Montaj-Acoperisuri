@@ -30,7 +30,6 @@ const Header = () => {
       "Doriți să sunați la SMART ROOF CONSTANTIN?\nNumăr: +40 (742) 691 135"
     );
     if (confirmCall) {
-      // Inițiază apelul direct
       window.location.href = "tel:+40742691135";
     }
   };
