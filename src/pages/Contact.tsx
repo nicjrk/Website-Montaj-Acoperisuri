@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader2';
 import Poza3 from '../Poze/Poza3.jpg';
+
 const Contact = () => {
   const contactInfo = [
     {
@@ -14,7 +15,14 @@ const Contact = () => {
       icon: Phone,
       title: 'Telefon',
       content: '+40 742 691 135',
-      link: 'tel:+40742691135', // Link pentru apel
+      handleClick: () => {
+        const confirmCall = window.confirm(
+          "Doriți să sunați la SMART ROOF CONSTANTIN?\nNumăr: +40 (742) 691 135"
+        );
+        if (confirmCall) {
+          window.location.href = "tel:+40742691135";
+        }
+      }, // Funcția pentru confirmare apel
     },
     {
       icon: Mail,
@@ -59,7 +67,14 @@ const Contact = () => {
                     <info.icon className="w-8 h-8 text-blue-600" />
                     <div>
                       <h3 className="text-xl font-semibold mb-1">{info.title}</h3>
-                      {info.link ? (
+                      {info.handleClick ? (
+                        <button
+                          onClick={info.handleClick}
+                          className="text-gray-600 hover:text-blue-600 transition"
+                        >
+                          {info.content}
+                        </button>
+                      ) : info.link ? (
                         <a href={info.link} className="text-gray-600 hover:text-blue-600 transition">
                           {info.content}
                         </a>

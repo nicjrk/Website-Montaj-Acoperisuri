@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import { Phone, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
+  const handleCall = () => {
+    const confirmCall = window.confirm(
+      "Doriți să sunați la SMART ROOF CONSTANTIN?\nNumăr: +40 (742) 691 135"
+    );
+    if (confirmCall) {
+      window.location.href = "tel:+40742691135";
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -13,7 +22,6 @@ const Footer = () => {
             <p className="text-gray-400">
               Experți în montaj, renovare și reparații acoperișuri de orice fel.
             </p>
-          
           </div>
 
           {/* Quick Links */}
@@ -49,9 +57,12 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone size={20} className="text-blue-400" />
-                <a href="tel:+40742691135" className="text-gray-400 hover:text-white transition-colors">
-                +40 742 691 135
-                </a>
+                <button
+                  onClick={handleCall}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  +40 742 691 135
+                </button>
               </li>
               <li className="flex items-center space-x-2">
                 <MessageCircle size={20} className="text-green-400" />
