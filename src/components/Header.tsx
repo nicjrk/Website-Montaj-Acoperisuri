@@ -34,7 +34,6 @@ const Header = () => {
       window.location.href = "tel:+40742691135";
     }
   };
-  
 
   return (
     <header
