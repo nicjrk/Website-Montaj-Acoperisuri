@@ -15,7 +15,7 @@ const Services = () => {
     {
       icon: Hammer,
       title: 'Montaj Acoperișuri',
-      description: 'Instalăm acoperișuri noi folosind materiale de cea mai înaltă calitate, adaptate nevoilor și preferințelor dumneavoastră.',
+      description: 'Instalăm acoperișuri noi folosind materiale de cea mai înkaltă calitate, adaptate nevoilor și preferințelor dumneavoastră.',
       features: [
         'Acoperișuri țiglă ceramică',
         'Acoperișuri metalice',
@@ -52,6 +52,23 @@ const Services = () => {
 
   return (
     <div>
+      {/* Meta Tags */}
+      <head>
+        <title>Servicii Profesionale de Montaj Acoperișuri | Smart Roof Constantin</title>
+        <meta
+          name="description"
+          content="Smart Roof Constantin oferă servicii profesionale de montaj acoperișuri, reparații și renovări, utilizând materiale de calitate superioară pentru un acoperiș durabil și estetic."
+        />
+        <meta
+          name="keywords"
+          content="montaj acoperișuri, reparații acoperișuri, renovare acoperișuri, acoperișuri țiglă ceramică, acoperișuri metalice, hidroizolații, sisteme pluviale, drenaj acoperișuri, izolație termică"
+        />
+        <meta property="og:title" content="Servicii Profesionale de Montaj Acoperișuri | Smart Roof Constantin" />
+        <meta property="og:description" content="Servicii complete de montaj, renovare și reparații acoperișuri. Contactează-ne pentru o ofertă personalizată!" />
+        <meta property="og:image" content="https://smartroofconstantin.ro/og-image-services.jpg" />
+        <meta property="og:url" content="http://smartroofconstantin.ro/services" />
+      </head>
+
       {/* PageHeader cu imagine locală */}
       <PageHeader
         title="Serviciile Noastre"

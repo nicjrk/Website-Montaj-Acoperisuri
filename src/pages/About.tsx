@@ -75,11 +75,23 @@ const About = () => {
     <div>
       {/* Meta Tags */}
       <head>
-        <title>Despre Noi | Servicii de Montaj Acoperișuri</title>
+        <title>Despre Noi | Servicii de Montaj Acoperișuri în București, Ilfov, Giurgiu, Pitești</title>
         <meta
           name="description"
-          content="Descoperiți experiența noastră în montaj de acoperișuri. Oferim servicii profesionale în locații precum București, Ilfov, Ploiești și multe altele."
+          content="Descoperiți experiența noastră în montaj de acoperișuri, renovări și reparații. Oferim servicii profesionale în locații precum București, Ilfov, Ploiești, Giurgiu, Pitești, Târgoviște și multe altele."
         />
+        <meta
+          name="keywords"
+          content="montaj acoperișuri București, montaj acoperisuri Bucuresti, reparații acoperișuri Ilfov, reparatii acoperisuri Ilfov, renovare acoperișuri Giurgiu, renovare acoperisuri Giurgiu, montaj acoperișuri Pitești, montaj acoperisuri Pitesti, reparații acoperișuri Târgoviște, reparatii acoperisuri Targoviste, acoperișuri Ploiești, acoperisuri Ploiesti, servicii acoperișuri, servicii acoperisuri, montaj acoperișuri industriale, renovare acoperișuri hale industriale"
+        />
+        <meta
+          name="keywords"
+          content="montaj acoperisuri Bucuresti, montaj acoperisuri Bucuresti fara diacritice, reparatii acoperisuri Ilfov, reparatii acoperisuri Giurgiu, renovare acoperisuri Pitesti, renovare acoperisuri Targoviste, acoperisuri Ploiesti, servicii acoperisuri fara diacritice, montaj acoperisuri industriale"
+        />
+        <meta property="og:title" content="Despre Noi | Servicii de Montaj Acoperișuri" />
+        <meta property="og:description" content="Servicii profesionale de montaj, renovare și reparații acoperișuri în diverse localități din România. Apelați la experții noștri pentru proiecte rezidențiale și industriale." />
+        <meta property="og:image" content="https://smartroofconstantin.ro/og-image.jpg" />
+        <meta property="og:url" content="http://smartroofconstantin.ro/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -91,7 +103,7 @@ const About = () => {
               "addressCountry": "RO",
             })),
             "areaServed": serviceLocations,
-            "description": "Servicii profesionale de montaj acoperișuri în diverse locații din România.",
+            "description": "Servicii profesionale de montaj acoperișuri, reparații și renovări în diverse locații din România.",
             "telephone": "0742691135",
             "openingHours": "Mo-Fr 08:00-18:00",
             "url": "http://smartroofconstantin.ro/",
@@ -115,6 +127,8 @@ const About = () => {
               Ne-am dedicat să oferim servicii de cea mai înaltă calitate în domeniul acoperișurilor,
               punând accent pe durabilitate, eficiență și satisfacția clienților noștri.
               Cu o experiență de peste 15 ani, suntem alegerea de încredere pentru proiectele dvs.
+              Fie că este vorba de montaj acoperișuri noi, reparații rapide sau renovări complete,
+              echipa noastră de profesioniști este pregătită să răspundă oricărei provocări.
             </p>
           </div>
         </div>
@@ -127,9 +141,9 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Shield, title: 'Integritate', description: 'Onestitate și transparență în toate interacțiunile' },
-              { icon: Users, title: 'Echipă', description: 'Profesioniști dedicați și experimentați' },
-              { icon: Award, title: 'Calitate', description: 'Standarde înalte în toate proiectele' },
-              { icon: Clock, title: 'Punctualitate', description: 'Respectăm termenele stabilite' },
+              { icon: Users, title: 'Echipă', description: 'Profesioniști dedicați și experimentați în montaj și reparații acoperișuri' },
+              { icon: Award, title: 'Calitate', description: 'Standarde înalte în toate proiectele noastre de montaj acoperișuri' },
+              { icon: Clock, title: 'Punctualitate', description: 'Respectăm termenele stabilite și livrăm la timp fiecare proiect' },
             ].map((value, index) => (
               <motion.div
                 key={index}
@@ -151,6 +165,11 @@ const About = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Lucrările Noastre</h2>
+          <p className="text-lg text-center text-gray-600 mb-8">
+            Vă prezentăm câteva dintre proiectele noastre recente de montaj și renovare acoperișuri.
+            De la acoperișuri rezidențiale moderne până la hale industriale, fiecare proiect este realizat
+            cu materiale de calitate superioară și respectarea celor mai înalte standarde.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
               <motion.div
@@ -180,12 +199,17 @@ const About = () => {
       {/* Service Locations Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Unde Oferim Servicii</h2>
-          <ul className="text-center text-gray-700 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Zonele în care oferim servicii</h2>
+          <p className="text-lg text-center mb-12">
+            Oferim servicii complete de montaj, renovare și reparații acoperișuri în următoarele localități:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {serviceLocations.map((location, index) => (
-              <li key={index} className="bg-white p-4 shadow-md rounded-md">{location}</li>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <h3 className="text-lg font-semibold mb-2">{location}</h3>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
     </div>

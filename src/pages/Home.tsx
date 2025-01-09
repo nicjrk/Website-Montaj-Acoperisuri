@@ -14,22 +14,39 @@ const Home = () => {
     {
       title: 'Montaj Acoperișuri',
       description: 'Instalare profesională de acoperișuri noi cu materiale premium.',
-      image: montajImage, // Imagine locală pentru Montaj
+      image: montajImage,
     },
     {
       title: 'Renovare',
       description: 'Renovăm și modernizăm acoperișuri existente pentru o durată de viață extinsă.',
-      image: renovareImage, // Imagine locală pentru Renovare
+      image: renovareImage,
     },
     {
       title: 'Reparații',
       description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș.',
-      image: reparatiiImage, // Imagine locală pentru Reparații
+      image: reparatiiImage,
     },
   ];
 
   return (
     <div className="pt-16">
+      {/* SEO Meta Tags */}
+      <head>
+        <title>Montaj Acoperișuri în București, Ilfov, Giurgiu - Smart Roof Constantin</title>
+        <meta
+          name="description"
+          content="Smart Roof Constantin oferă servicii profesionale de montaj acoperișuri, reparații și renovări în București, Ilfov, Giurgiu, Pitești, Târgoviște, Ploiești și alte localități. Contactați-ne pentru servicii de calitate."
+        />
+        <meta
+          name="keywords"
+          content="montaj acoperișuri București, montaj acoperisuri Bucuresti, reparații acoperișuri Ilfov, reparatii acoperisuri Ilfov, renovare acoperișuri Giurgiu, renovare acoperisuri Giurgiu, montaj acoperișuri Pitești, montaj acoperisuri Pitesti, reparații acoperișuri Târgoviște, reparatii acoperisuri Targoviste, acoperișuri Ploiești, acoperisuri Ploiesti, servicii acoperișuri, servicii acoperisuri"
+        />
+        <meta property="og:title" content="Montaj Acoperișuri în București, Ilfov, Giurgiu - Smart Roof Constantin" />
+        <meta property="og:description" content="Servicii profesionale de montaj, renovare și reparații acoperișuri în București și alte localități din sudul României." />
+        <meta property="og:image" content={heroImage} />
+        <meta property="og:url" content="https://smartroofconstantin.ro" />
+      </head>
+
       {/* Hero Section */}
       <section
         className="relative h-screen flex items-center justify-center text-white"
@@ -47,9 +64,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Montaj, Renovare, Reparație
-            <br />
-            Pentru Acoperișuri De Orice Fel
+            Montaj Acoperișuri în București și Împrejurimi
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -57,7 +72,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl mb-8"
           >
-            Cauți o firmă serioasă care se ocupă cu acoperișuri?
+            Cauți o firmă serioasă care se ocupă cu montaj și reparații acoperișuri în București, Ilfov sau alte localități?
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,7 +93,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Serviciile Noastre
+            Serviciile Noastre de Montaj și Reparații Acoperișuri
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -114,32 +129,31 @@ const Home = () => {
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            De Ce Să Ne Alegi
+            De Ce Să Ne Alegi pentru Montaj și Reparații Acoperișuri
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-  {[
-    'Experiență vastă în domeniu',
-    'Materiale premium garantate',
-    'Echipă profesionistă',
-    'Garanție extinsă pentru lucrări',
-    'Nu percepem avans la încheierea contractului',
-    'Avansul se percepe doar când materialele necesare sunt la locația dumneavoastra și s-a demarat lucrarea',
-    'Lucrarea începe doar după ce verificați materialele',
-    'Seriozitate și transparență în execuție',
-  ].map((advantage, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="flex items-center space-x-4"
-    >
-      <CheckCircle className="flex-shrink-0" />
-      <span className="text-lg">{advantage}</span>
-    </motion.div>
-  ))}
-</div>
-
+            {[
+              'Experiență vastă în domeniu',
+              'Materiale premium garantate',
+              'Echipă profesionistă',
+              'Garanție extinsă pentru lucrări',
+              'Nu percepem avans la încheierea contractului',
+              'Avansul se percepe doar când materialele necesare sunt la locația dumneavoastră și s-a demarat lucrarea',
+              'Lucrarea începe doar după ce verificați materialele',
+              'Seriozitate și transparență în execuție',
+            ].map((advantage, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="flex items-center space-x-4"
+              >
+                <CheckCircle className="flex-shrink-0 text-green-400" />
+                <span className="text-lg">{advantage}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
