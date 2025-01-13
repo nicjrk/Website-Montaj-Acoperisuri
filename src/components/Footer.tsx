@@ -20,7 +20,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">SMART ROOF CONSTANTIN</h3>
             <p className="text-gray-400">
-              Experți în montaj, renovare și reparații acoperișuri de orice fel.
+              Experți în montaj, renovare și reparații acoperișuri de orice fel în București, Ilfov, Pitești, Giurgiu, Târgoviște și Ploiești.
+            </p>
+            <p className="text-gray-400">
+              Oferim servicii complete de montaj și reparații acoperișuri, utilizând doar materiale de calitate superioară.
             </p>
           </div>
 
@@ -79,8 +82,14 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* SEO Content */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} SMART ROOF CONSTANTIN. Toate drepturile rezervate.</p>
+          <p>
+            Oferim servicii de montaj, renovare și reparații acoperișuri în București, Ilfov, Pitești, Giurgiu, Târgoviște și Ploiești.
+            Contactați-ne pentru o ofertă personalizată și servicii de calitate premium.
+          </p>
+          
+          <p className="mt-4">&copy; {new Date().getFullYear()} SMART ROOF CONSTANTIN. Toate drepturile rezervate.</p>
         </div>
       </div>
     </footer>
