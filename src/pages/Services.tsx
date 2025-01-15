@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Wrench, Shield, ArrowRight, Hammer } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
