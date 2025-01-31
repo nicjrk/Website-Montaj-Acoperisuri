@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Shield, Award, Clock } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
