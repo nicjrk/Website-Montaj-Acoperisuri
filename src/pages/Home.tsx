@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <div className="pt-16">
       <Helmet>
-        <title>Montaj Acoperișuri în București, Ilfov, Giurgiu - Smart Roof Constantin</title>
+        <title>Montaj Acoperișuri în București, Ilfov, Giurgiu </title>
         <meta
           name="description"
           content="Smart Roof Constantin oferă servicii profesionale de montaj acoperișuri, reparații și renovări în București, Ilfov, Giurgiu, Pitești, Târgoviște, Ploiești și alte localități. Contactați-ne pentru servicii de calitate."
