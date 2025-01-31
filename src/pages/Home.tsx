@@ -1,9 +1,9 @@
-
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-// Imagini locale pentru sectiunea Servicii
+// Imagini locale pentru secțiunea Servicii
 import montajImage from '../Poze/Poza3.jpg';
 import renovareImage from '../Poze/Poza4.jpg';
 import reparatiiImage from '../Poze/Poza10.jpg';
@@ -13,50 +13,74 @@ const Home = () => {
   const services = [
     {
       title: 'Montaj Acoperisuri',
-      description: 'Instalare profesionala de acoperisuri noi cu materiale premium.',
+      description: 'Instalare profesională de acoperișuri noi cu materiale premium.',
       image: montajImage,
     },
     {
       title: 'Renovare',
-      description: 'Renovam si modernizam acoperisuri existente pentru o durata de viata extinsa.',
+      description: 'Renovăm și modernizăm acoperișuri existente pentru o durată de viață extinsă.',
       image: renovareImage,
     },
     {
-      title: 'Reparatii',
-      description: 'Servicii rapide si eficiente de reparatii pentru orice tip de acoperis.',
+      title: 'Reparații',
+      description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș.',
       image: reparatiiImage,
     },
   ];
 
   const advantages = [
-    'Experienta vasta in domeniu',
+    'Experiență vastă în domeniu',
     'Materiale premium garantate',
-    'Echipa profesionista',
-    'Garantie extinsa pentru lucrari',
-    'Nu percepem avans la incheierea contractului',
-    'Avansul se percepe doar cand materialele necesare sunt la locatia dumneavoastra si s-a demarat lucrarea',
-    'Lucrarea incepe doar dupa ce verificati materialele',
-    'Seriozitate si transparenta in executie',
+    'Echipă profesionistă',
+    'Garanție extinsă pentru lucrări',
+    'Nu percepem avans la încheierea contractului',
+    'Avansul se percepe doar când materialele necesare sunt la locația dumneavoastră și s-a demarat lucrarea',
+    'Lucrarea începe doar după ce verificați materialele',
+    'Seriozitate și transparență în execuție',
   ];
 
   return (
     <div className="pt-16">
-      {/* SEO Meta Tags */}
-      <head>
-        <title>Montaj Acoperisuri in Bucuresti, Ilfov, Giurgiu - Smart Roof Constantin</title>
+      <Helmet>
+        <title>Montaj Acoperișuri în București, Ilfov, Giurgiu - Smart Roof Constantin</title>
         <meta
           name="description"
-          content="Smart Roof Constantin ofera servicii profesionale de montaj acoperisuri, reparatii si renovari in Bucuresti, Ilfov, Giurgiu, Pitesti, Targoviste, Ploiesti si alte localitati. Contactati-ne pentru servicii de calitate."
+          content="Smart Roof Constantin oferă servicii profesionale de montaj acoperișuri, reparații și renovări în București, Ilfov, Giurgiu, Pitești, Târgoviște, Ploiești și alte localități. Contactați-ne pentru servicii de calitate."
         />
         <meta
           name="keywords"
-          content="montaj acoperisuri Bucuresti, reparatii acoperisuri Ilfov, renovare acoperisuri Giurgiu, montaj acoperisuri Pitesti, reparatii acoperisuri Targoviste, acoperisuri Ploiesti, servicii acoperisuri"
+          content="montaj acoperisuri București, reparații acoperisuri Ilfov, renovare acoperisuri Giurgiu, montaj acoperisuri Pitești, reparații acoperisuri Târgoviște, acoperisuri Ploiești, servicii acoperisuri"
         />
-        <meta property="og:title" content="Montaj Acoperisuri in Bucuresti, Ilfov, Giurgiu - Smart Roof Constantin" />
-        <meta property="og:description" content="Servicii profesionale de montaj, renovare si reparatii acoperisuri in Bucuresti si alte localitati din sudul Romaniei." />
+        <meta property="og:title" content="Montaj Acoperișuri în București, Ilfov, Giurgiu - Smart Roof Constantin" />
+        <meta
+          property="og:description"
+          content="Servicii profesionale de montaj, renovare și reparații acoperișuri în București și alte localități din sudul României."
+        />
         <meta property="og:image" content={heroImage} />
         <meta property="og:url" content="https://smartroofconstantin.ro" />
-      </head>
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Smart Roof Constantin",
+            "url": "https://smartroofconstantin.ro",
+            "logo": "https://smartroofconstantin.ro/path/to/logo.png",
+            "description": "Smart Roof Constantin oferă servicii profesionale de montaj, renovare și reparații acoperișuri în București, Ilfov, Giurgiu, Pitești, Târgoviște, Ploiești și alte localități.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Strada Exemplu, nr. 1",
+                "addressLocality": "București",
+                "postalCode": "123456",
+                "addressCountry": "RO"
+            },
+            "telephone": "+40 123 456 789"
+          }
+          `}
+        </script>
+      </Helmet>
 
       {/* Hero Section */}
       <section
@@ -75,7 +99,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Montaj Acoperisuri in Bucuresti si Imprejurimi
+            Montaj Acoperișuri în București și Împrejurimi
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +107,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl mb-8"
           >
-            Cauti o firma serioasa care se ocupa cu montaj si reparatii acoperisuri in Bucuresti, Ilfov sau alte localitati?
+            Cauți o firmă serioasă care se ocupă cu montaj și reparații acoperișuri în București, Ilfov sau alte localități?
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,7 +118,7 @@ const Home = () => {
               to="/contact"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              Hai sa colaboram! <ArrowRight />
+              Hai să colaborăm! <ArrowRight />
             </Link>
           </motion.div>
         </div>
@@ -104,7 +128,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Serviciile Noastre de Montaj si Reparatii Acoperisuri
+            Serviciile Noastre de Montaj și Reparații Acoperișuri
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -127,7 +151,7 @@ const Home = () => {
                     to="/services"
                     className="inline-flex items-center text-blue-600 hover:text-blue-700"
                   >
-                    Afla mai multe <ArrowRight className="ml-2" size={16} />
+                    Află mai multe <ArrowRight className="ml-2" size={16} />
                   </Link>
                 </div>
               </motion.div>
@@ -140,7 +164,7 @@ const Home = () => {
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            De Ce Sa Ne Alegi pentru Montaj si Reparatii Acoperisuri
+            De ce să ne alegi pentru montaj și reparații acoperișuri
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {advantages.map((advantage, index) => (
@@ -163,13 +187,13 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Pregatit sa Incepem?
+            Pregătit să începem?
           </h2>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Solicitati o Oferta<ArrowRight />
+            Solicitați o ofertă <ArrowRight />
           </Link>
         </div>
       </section>
