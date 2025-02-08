@@ -3,7 +3,7 @@
   <!-- URL-ul paginii Acasă -->
   <url>
     <loc>https://www.smartroofconstantin.ro/</loc>
-    <lastmod>2024-12-06</lastmod>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- URL-ul paginii Despre Noi -->
   <url>
     <loc>https://www.smartroofconstantin.ro/about</loc>
-    <lastmod>2024-12-06</lastmod>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19,7 +19,7 @@
   <!-- URL-ul paginii Servicii -->
   <url>
     <loc>https://www.smartroofconstantin.ro/services</loc>
-    <lastmod>2024-12-06</lastmod>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -27,8 +27,40 @@
   <!-- URL-ul paginii Contact -->
   <url>
     <loc>https://www.smartroofconstantin.ro/contact</loc>
-    <lastmod>2024-12-06</lastmod>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- URL-urile paginilor pentru fiecare oraș -->
+  <url>
+    <loc>https://www.smartroofconstantin.ro/montaj-acoperisuri-bucuresti</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.smartroofconstantin.ro/montaj-acoperisuri-ilfov</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.smartroofconstantin.ro/montaj-acoperisuri-pitesti</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.smartroofconstantin.ro/montaj-acoperisuri-giurgiu</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.smartroofconstantin.ro/montaj-acoperisuri-targoviste</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
