@@ -19,17 +19,17 @@ const MontajAcoperisuriPitesti: React.FC = () => {
   const services: Service[] = [
     {
       title: 'Montaj Acoperisuri',
-      description: 'Instalare profesională de acoperișuri noi cu materiale premium.',
+      description: 'Instalare profesională de acoperișuri noi în Pitesti cu materiale premium.',
       image: montajImage,
     },
     {
       title: 'Renovare',
-      description: 'Renovăm și modernizăm acoperișuri existente pentru o durată de viață extinsă.',
+      description: 'Renovăm și modernizăm acoperișuri în Pitesti, existente pentru o durată de viață extinsă.',
       image: renovareImage,
     },
     {
       title: 'Reparații',
-      description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș.',
+      description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș în Pitesti.',
       image: reparatiiImage,
     },
   ];

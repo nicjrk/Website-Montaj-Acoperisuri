@@ -19,17 +19,17 @@ const MontajAcoperisuriGiurgiu: React.FC = () => {
   const services: Service[] = [
     {
       title: 'Montaj Acoperisuri',
-      description: 'Instalare profesională de acoperișuri noi cu materiale premium.',
+      description: 'Instalare profesională de acoperișuri noi cu materiale premium în Giurgiu.',
       image: montajImage,
     },
     {
       title: 'Renovare',
-      description: 'Renovăm și modernizăm acoperișuri existente pentru o durată de viață extinsă.',
+      description: 'Renovăm și modernizăm acoperișuri existente pentru o durată de viață extinsă în Giurgiu.',
       image: renovareImage,
     },
     {
       title: 'Reparații',
-      description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș.',
+      description: 'Servicii rapide și eficiente în Giurgiu de reparații pentru orice tip de acoperiș.',
       image: reparatiiImage,
     },
   ];
