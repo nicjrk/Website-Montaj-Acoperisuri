@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader2';
@@ -10,6 +9,12 @@ const Contact = () => {
       icon: MapPin,
       title: 'Locație',
       content: 'Strada General Nicolae C. Dona 1, București 030167, România',
+      handleClick: () => {
+        window.open(
+          'https://www.google.com/maps/place/Strada+General+Nicolae+C.+Dona+1,+București+030167,+România',
+          '_blank'
+        );
+      }, // Deschide locația în Google Maps
     },
     {
       icon: Phone,
@@ -20,15 +25,17 @@ const Contact = () => {
           "Doriți să sunați la SMART ROOF CONSTANTIN?\nNumăr: +40 (742) 691 135"
         );
         if (confirmCall) {
-          window.location.href = "tel:+40742691135";
+          window.open("tel:+40742691135");
         }
-      }, // Funcția pentru confirmare apel
+      }, // Confirmare și deschidere aplicație apelare
     },
     {
       icon: Mail,
       title: 'Email',
       content: 'smartroofconstantin.75@gmail.com',
-      link: 'mailto:smartroofconstantin.75@gmail.com', // Link pentru e-mail
+      handleClick: () => {
+        window.open('mailto:smartroofconstantin.75@gmail.com', '_blank');
+      }, // Deschide clientul de email într-o filă nouă
     },
     {
       icon: Clock,
@@ -62,25 +69,13 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white p-6 rounded-lg shadow-lg flex items-center gap-4"
+                    className="bg-white p-6 rounded-lg shadow-lg flex items-center gap-4 cursor-pointer hover:bg-gray-50 transition"
+                    onClick={info.handleClick} // Funcția de click pentru toate elementele
                   >
                     <info.icon className="w-8 h-8 text-blue-600" />
                     <div>
                       <h3 className="text-xl font-semibold mb-1">{info.title}</h3>
-                      {info.handleClick ? (
-                        <button
-                          onClick={info.handleClick}
-                          className="text-gray-600 hover:text-blue-600 transition"
-                        >
-                          {info.content}
-                        </button>
-                      ) : info.link ? (
-                        <a href={info.link} className="text-gray-600 hover:text-blue-600 transition">
-                          {info.content}
-                        </a>
-                      ) : (
-                        <p className="text-gray-600">{info.content}</p>
-                      )}
+                      <p className="text-gray-600">{info.content}</p>
                     </div>
                   </motion.div>
                 ))}
