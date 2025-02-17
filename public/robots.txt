@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smartroofconstantin.ro/sitemap.xml
+Sitemap: https://www.smartroofconstantin.ro/sitemap.xml

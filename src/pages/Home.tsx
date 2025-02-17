@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -41,7 +40,7 @@ const Home = () => {
 
   return (
     <div className="pt-16">
-      <Helmet>
+     
         <title>Montaj Acoperisuri in Bucuresti, Ilfov, Giurgiu, Pitesti,Ploiesti</title>
         <meta
           name="description"
@@ -59,29 +58,7 @@ const Home = () => {
         <meta property="og:image" content={heroImage} />
         <meta property="og:url" content="https://smartroofconstantin.ro" />
 
-        {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Smart Roof Constantin",
-            "url": "https://smartroofconstantin.ro",
-            "logo": "https://smartroofconstantin.ro/path/to/logo.png",
-            "description": "Smart Roof Constantin oferă servicii profesionale de montaj, renovare și reparații acoperișuri în București, Ilfov, Giurgiu, Pitești, Târgoviște, Ploiești și alte localități.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Strada Exemplu, nr. 1",
-                "addressLocality": "București",
-                "postalCode": "123456",
-                "addressCountry": "RO"
-            },
-            "telephone": "+40 123 456 789"
-          }
-          `}
-        </script>
-      </Helmet>
-
+        
       {/* Hero Section */}
       <section
         className="relative h-screen flex items-center justify-center text-white"

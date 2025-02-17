@@ -63,7 +63,7 @@ const MontajAcoperisuriGiurgiu: React.FC = () => {
           content="Servicii profesionale de montaj, renovare și reparații acoperișuri în Giurgiu."
         />
         <meta property="og:image" content={heroImage} />
-        <meta property="og:url" content="https://smartroofconstantin.ro/montaj-acoperisuri-giurgiu" />
+        <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-giurgiu" />
       </Helmet>
 
       {/* Hero Section */}

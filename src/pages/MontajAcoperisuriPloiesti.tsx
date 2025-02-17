@@ -63,7 +63,7 @@ const MontajAcoperisuriPloiesti: React.FC = () => {
           content="Servicii profesionale de montaj, renovare și reparații acoperișuri în Ploiești."
         />
         <meta property="og:image" content={heroImage} />
-        <meta property="og:url" content="https://smartroofconstantin.ro/montaj-acoperisuri-ploiesti" />
+        <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-ploiesti" />
       </Helmet>
 
       {/* Hero Section */}

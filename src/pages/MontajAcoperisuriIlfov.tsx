@@ -62,7 +62,7 @@ const MontajAcoperisuriIlfov: React.FC = () => {
           content="Servicii profesionale de montaj, renovare și reparații acoperișuri în Ilfov."
         />
         <meta property="og:image" content={heroImage} />
-        <meta property="og:url" content="https://smartroofconstantin.ro/montaj-acoperisuri-ilfov" />
+        <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-ilfov" />
       </Helmet>
 
       {/* Hero Section */}

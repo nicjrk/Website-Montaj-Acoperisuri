@@ -57,7 +57,7 @@ const MontajAcoperisuriBucuresti = () => {
           content="Servicii profesionale de montaj, renovare și reparații acoperișuri în București."
         />
         <meta property="og:image" content={heroImage} />
-        <meta property="og:url" content="https://smartroofconstantin.ro/montaj-acoperisuri-bucuresti" />
+        <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-bucuresti" />
       </Helmet>
 
       {/* Hero Section */}

@@ -63,7 +63,7 @@ const MontajAcoperisuriPitesti: React.FC = () => {
           content="Servicii profesionale de montaj, renovare și reparații acoperișuri în Pitești."
         />
         <meta property="og:image" content={heroImage} />
-        <meta property="og:url" content="https://smartroofconstantin.ro/montaj-acoperisuri-pitesti" />
+        <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-pitesti" />
       </Helmet>
 
       {/* Hero Section */}
