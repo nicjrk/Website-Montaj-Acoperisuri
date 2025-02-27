@@ -65,7 +65,7 @@ const MontajAcoperisuriBucuresti: React.FC = () => {
         <meta property="og:image" content={heroImage} />
         <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-bucuresti" />
         {/* Eticheta canonică */}
-        <link rel="canonical" href="https://www.smartroofconstantin.ro" />
+        <link rel="canonical" href="https://www.smartroofconstantin.ro/montaj-acoperisuri-bucuresti" />
       </Helmet>
 
       {/* Hero Section */}
