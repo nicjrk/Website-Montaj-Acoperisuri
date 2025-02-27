@@ -9,26 +9,32 @@ import renovareImage from '../Poze/Poza4.jpg';
 import reparatiiImage from '../Poze/Poza10.jpg';
 import heroImage from '../Poze/slide4.jpg';
 
-const MontajAcoperisuriBucuresti = () => {
-  const services = [
+interface Service {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const MontajAcoperisuriBucuresti: React.FC = () => {
+  const services: Service[] = [
     {
       title: 'Montaj Acoperisuri',
-      description: 'Instalare profesională de acoperișuri noi cu materiale premium în Bucuresti.',
+      description: 'Instalare profesională de acoperișuri noi cu materiale premium în București.',
       image: montajImage,
     },
     {
       title: 'Renovare',
-      description: 'Renovăm și modernizăm acoperișuri existente în Bucuresti pentru o durată de viață extinsă.',
+      description: 'Renovăm și modernizăm acoperișuri existente în București pentru o durată de viață extinsă.',
       image: renovareImage,
     },
     {
       title: 'Reparații',
-      description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș in Bucuresti.',
+      description: 'Servicii rapide și eficiente de reparații pentru orice tip de acoperiș în București.',
       image: reparatiiImage,
     },
   ];
 
-  const advantages = [
+  const advantages: string[] = [
     'Experiență vastă în domeniu',
     'Materiale premium garantate',
     'Echipă profesionistă',
@@ -58,6 +64,8 @@ const MontajAcoperisuriBucuresti = () => {
         />
         <meta property="og:image" content={heroImage} />
         <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-bucuresti" />
+        {/* Eticheta canonică */}
+        <link rel="canonical" href="https://www.smartroofconstantin.ro" />
       </Helmet>
 
       {/* Hero Section */}
@@ -154,6 +162,7 @@ const MontajAcoperisuriBucuresti = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">

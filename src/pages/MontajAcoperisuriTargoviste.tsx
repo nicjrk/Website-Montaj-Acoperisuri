@@ -64,6 +64,8 @@ const MontajAcoperisuriTargoviste: React.FC = () => {
         />
         <meta property="og:image" content={heroImage} />
         <meta property="og:url" content="https://www.smartroofconstantin.ro/montaj-acoperisuri-targoviste" />
+        {/* Eticheta canonică */}
+        <link rel="canonical" href="https://smartroofconstantin.ro" />
       </Helmet>
 
       {/* Hero Section */}
@@ -160,6 +162,7 @@ const MontajAcoperisuriTargoviste: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
